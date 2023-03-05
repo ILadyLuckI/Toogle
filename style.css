@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: black;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(91deg, #ce14f3d4, #c8ec8dd4);
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 240px;
+    height: 90px;
+    background-color: #707070;
+    border-radius: 30px;
+    border: outset 5px;
+    position: absolute;
+    cursor: pointer;
+    transition: .3s;
+}
+
+input[type="checkbox"]::before{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #d5d5d5;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    transition: .3s;
+}
+
+input[type="checkbox"]::after{
+    content: "DESLIGA";
+    position: absolute;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bolder;
+    left: 130px;
+    top: 29px;
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked{
+    background: linear-gradient(91deg, #c8ec8dd4, #ce14f3d4);
+}
+
+input[type="checkbox"]:checked::before{
+    background: black;
+    left: 160px;
+}
+
+input[type="checkbox"]:checked::after{
+    content: "LIGA";
+    color: #fff;
+    left: 20px;
+}
